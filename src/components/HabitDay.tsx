@@ -19,7 +19,8 @@ export function HabitDay({ amountOfHabits = 0, amountCompleted = 0, date, ...res
     const amountAccomplishePercentage = amountOfHabits > 0 ? generateProgressPercentage(amountOfHabits, amountCompleted) : 0
     const today = dayjs().startOf('day').toDate();
     const isCurrentDay = dayjs(date).isSame(today);
-    const dayAndMonth = dayjs(date).format('DD')
+    // const dayAndMonth = dayjs(date).format('DD')
+    
     return (
         <TouchableOpacity 
             className={clsx("rounded-lg border-2 m-1", {
@@ -35,7 +36,7 @@ export function HabitDay({ amountOfHabits = 0, amountCompleted = 0, date, ...res
             activeOpacity={0.7}
             {...rest}
         >
-            <Text className="text-zinc-400 text-center mt-1">{dayAndMonth}</Text>
+            {/* <Text className="text-zinc-400 text-center mt-1">{dayAndMonth}</Text> */}
         </TouchableOpacity>
     )
 }
